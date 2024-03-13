@@ -305,7 +305,6 @@ footer p{
     font-weight: bolder;
     padding: 5px;
     
-    
     }
 
 table{
@@ -316,6 +315,12 @@ table{
 .container{
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.form-validation{
+    font-size: small;
+    margin-left: 10px;
+    margin-top: -10px;
+    margin-bottom: -5px;
 }
 
 
