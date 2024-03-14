@@ -369,3 +369,71 @@ table{
     }
     
 }
+#principles, #vision,#achievements{
+    display: none;
+      
+}
+#scroll-btn {       
+    /* opacity: 0;    */
+    display: none;
+    width: 40px;
+    height: 40px;
+    color: #d32f2f;
+    background-color: #f3e6e9;
+    position: fixed;
+    bottom: 10%;
+    right: 2%;    
+    border: 2px solid #0c0909;
+    border-radius: 50%; 
+    font: bold 20px monospace;       
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+
+/* #scrollToTopBtn {
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 48px;
+    width: 48px;
+    position: fixed;
+    bottom: 10%;
+    right: 2%;  
+  } */
+
+
+
+  .products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin:30px;
+     
+  }
+  .card{
+    margin-bottom: 20px;
+  }
+  .cart-bar{
+    background-color: #acacac;
+    text-align: right;
+    padding: 10px;
+  }
+  .cart-bar button{
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+    border: 1px solid beige;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .cart-bar i{
+    font-size: 24px;
+  }
+ #prdctCnt{
+    display: none;
+ }
