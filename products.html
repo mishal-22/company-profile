@@ -9,11 +9,12 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-  
- 
+
     <!-- Bootstrap Font Icon CSS -->
-    <link rel="stylesheet" href=
-"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="productsJs.js"></script>
     <title>Products</title>
@@ -53,19 +54,36 @@
         </div>
       </nav>
     </div>
-    
+
     <div class="cart-bar">
-        
-        <a href="#" style="text-decoration: none;color: black;"><i class="bi bi-cart4"></i>Go to cart</a>
-        <button><i class="bi bi-cart4"></i> save cart <span class="position-absolute  start-100 translate-middle badge rounded-pill bg-danger" style="margin-left: -30px;margin-top: -35px;" id="prdctCnt">
-            
-            <span class="visually-hidden">unread messages</span>
-          </span></button>
+      <a href="cart.html" onclick="displayItems()"> 
+      <button>
+        <i class="bi bi-cart4"></i> Go to cart
+        <span
+          class="position-absolute start-100 translate-middle badge rounded-pill bg-danger"
+          style="margin-left: -30px; margin-top: -35px"
+          id="prdctCnt"
+        >
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </button>
+    </a>
     </div>
-    <h1 style="text-align: center;margin-top: 10px;font-size: 52px;color: black;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Products</h1>
+    <h1
+      style="
+        text-align: center;
+        margin-top: 10px;
+        font-size: 52px;
+        color: black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      "
+    >
+      Products
+    </h1>
     <div class="products">
       <div class="card" style="width: 18rem">
-        <img src="watch.webp" class="card-img-top" alt="..." />
+        <img src="watch.webp" class="card-img-top product-img" alt="..." />
         <div class="card-body">
           <h5 class="card-title">Smart Watch</h5>
           <p class="card-text">
@@ -78,20 +96,23 @@
                 color: rgb(36, 35, 34);
               "
             >
-              M.R.P: <del>₹5,999</del> (81% off) Flat INR 200 Off on ICICI CreditCardsFlat
-              INR 200 Off on ICICI CreditCards</span
+              M.R.P: <del>₹5,999</del> (81% off) Flat INR 200 Off on ICICI
+              CreditCardsFlat INR 200 Off on ICICI CreditCards</span
             >
           </p>
+
           
-          <a href="#" onclick="addToCart()" class="btn btn-primary">Add to cart</a>
         </div>
+        <a href="#"  class="btn btn-primary add-cart" 
+            >Add to cart</a
+          >
       </div>
       <div class="card" style="width: 18rem">
-        <img src="hp laptop.jpg" class="card-img-top" alt="..." />
+        <img src="hp laptop.jpg" class="card-img-top product-img" alt="..." />
         <div class="card-body">
           <h5 class="card-title">HP Laptop 15s 12th Gen Intel Core i3</h5>
           <p class="card-text">
-            <b> ₹36,990</b>
+            <b class="product-price"> ₹36,990</b>
             <span
               style="
                 font-size: 14px;
@@ -100,20 +121,28 @@
                 color: rgb(36, 35, 34);
               "
             >
-              M.R.P: <del>₹51,134</del> (28% off) Inclusive of all taxes
-              EMI starts at ₹1,793. No Cost EMI available </span
-            >
+              M.R.P: <del>₹51,134</del> (28% off) Inclusive of all taxes EMI
+              starts at ₹1,793. No Cost EMI available
+            </span>
           </p>
-          <a href="#" onclick="addToCart()" class="btn btn-primary">Add to cart</a>
         </div>
+        <a href="#"  class="btn btn-primary add-cart"
+          >Add to cart</a
+        >
       </div>
 
       <div class="card" style="width: 18rem">
-        <img src="i pad pencil.jpg" class="card-img-top" alt="..." width="90%" height="49%" />
+        <img
+          src="i pad pencil.jpg"
+          class="card-img-top product-img" 
+          alt="..."
+          width="90%"
+          height="49%"
+        />
         <div class="card-body">
-          <h5 class="card-title"> Ipad Pencil Stylus for ipad(2018-2023)</h5>
+          <h5 class="card-title">Ipad Pencil Stylus for ipad(2018-2023)</h5>
           <p class="card-text">
-            <b>₹1,299</b>
+            <b class="product-price">₹1,299</b>
             <span
               style="
                 font-size: 14px;
@@ -122,19 +151,23 @@
                 color: rgb(36, 35, 34);
               "
             >
-              M.R.P: <del>₹5,999</del> (78% off)Inclusive of all taxes
-              EMI starts at ₹118 per month.</span
+              M.R.P: <del>₹5,999</del> (78% off)Inclusive of all taxes EMI
+              starts at ₹118 per month.</span
             >
           </p>
-          <a href="#" onclick="addToCart()" class="btn btn-primary">Add to cart</a>
         </div>
+        <a href="#"  class="btn btn-primary add-cart"
+          >Add to cart</a
+        >
       </div>
       <div class="card" style="width: 18rem">
-        <img src="macbook.jpg" class="card-img-top" alt="..." />
+        <img src="macbook.jpg" class="card-img-top product-img" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">Apple 2023 MacBook Pro  (8GB , 512GB) - Silver</h5>
+          <h5 class="card-title">
+            Apple 2023 MacBook Pro (8GB , 512GB) - Silver
+          </h5>
           <p class="card-text">
-            <b>₹1,69,900</b>
+            <b class="product-price">₹1,69,900</b>
             <span
               style="
                 font-size: 14px;
@@ -143,19 +176,23 @@
                 color: rgb(36, 35, 34);
               "
             >
-            Inclusive of all taxes
-            EMI starts at ₹8,238. No Cost EMI available</span
+              Inclusive of all taxes EMI starts at ₹8,238. No Cost EMI
+              available</span
             >
           </p>
-          <a href="#" onclick="addToCart()" class="btn btn-primary">Add to cart</a>
         </div>
+        <a href="#"  class="btn btn-primary add-cart"
+          >Add to cart</a
+        >
       </div>
       <div class="card" style="width: 18rem">
-        <img src="noise buds.jpg" class="card-img-top" alt="..." />
+        <img src="noise buds.jpg" class="card-img-top product-img" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">Noise Buds VS104 Truly Wireless Earbuds with 45H of Playtime</h5>
+          <h5 class="card-title">
+            Noise Buds VS104 Truly Wireless Earbuds with 45H of Playtime
+          </h5>
           <p class="card-text">
-            <b>₹999</b>
+            <b class="product-price">₹999</b>
             <span
               style="
                 font-size: 14px;
@@ -167,15 +204,19 @@
               M.R.P: <del>₹3,499</del> (81% off) Inclusive of all taxes</span
             >
           </p>
-          <a href="#" onclick="addToCart()" class="btn btn-primary">Add to cart</a>
         </div>
+        <a href="#" class="btn btn-primary add-cart"
+          >Add to cart</a
+        >
       </div>
+
+
       <div class="card" style="width: 18rem">
-        <img src="headphone.jpg" class="card-img-top" alt="..." />
+        <img src="headphone.jpg" class="card-img-top product-img" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">CLAW SM50  DJ Wired Over Ear Headphones</h5>
+          <h5 class="card-title">CLAW SM50 DJ Wired Over Ear Headphones</h5>
           <p class="card-text">
-            <b>₹1,990</b>
+            <b class="product-price">₹1,990</b>
             <span
               style="
                 font-size: 14px;
@@ -184,14 +225,17 @@
                 color: rgb(36, 35, 34);
               "
             >
-              M.R.P: <del>₹2,990</del> (81% off) Inclusive of all taxes
-              EMI starts at ₹97. No Cost EMI available</span
+              M.R.P: <del>₹2,990</del> (81% off) Inclusive of all taxes EMI
+              starts at ₹97. No Cost EMI available</span
             >
           </p>
-          <a href="#" onclick="addToCart()" class="btn btn-primary">Add to cart</a>
         </div>
+        <a href="#"  class="btn btn-primary add-cart"
+          >Add to cart</a
+        >
       </div>
     </div>
+    <!-- <div id="cart-content"></div> -->
     <footer style="left: 0; bottom: 0; position: fixed">
       <p>Copyright © Phenix Technologies Pvt Ltd.</p>
     </footer>

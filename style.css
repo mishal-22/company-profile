@@ -427,7 +427,7 @@ table{
     padding: 3px;
     border-radius: 5px;
     font-size: medium;
-    font-weight: bold;
+    /* font-weight: bold; */
     border: 1px solid beige;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
@@ -436,4 +436,8 @@ table{
   }
  #prdctCnt{
     display: none;
+ }
+ .add-cart{
+    margin-top: -40px;
+    
  }
