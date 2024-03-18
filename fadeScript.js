@@ -4,7 +4,7 @@
  * @param {*} element 
  */
 
-// taking the dispaying element as the parameter
+// taking the displaying element as the parameter
 function fade(element){
         let targetDiv = document.getElementById(element)
         

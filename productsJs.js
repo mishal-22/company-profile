@@ -1,30 +1,46 @@
 
+// initalizing cart as array
 let cartItems=[]
-
+//addEventListener() method attaches an event handler to a document.
+//The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed 
 document.addEventListener('DOMContentLoaded',loadContent)
 
+
+/**
+ *  description : this function will call when the html document loaded 
+ */
 function loadContent(){
+  //The querySelectorAll() method returns a NodeList.
   let cartBtns=document.querySelectorAll('.add-cart');
+
+  // when each button clicked addCart method is called
   cartBtns.forEach((btn)=>{
 btn.addEventListener('click',addCart)
   });
 
 
-cartItems=JSON.parse(localStorage.getItem("products") || [])
 
-// let itemList=[]
+
 /** =================================================================
- * @author 
+ * @author mishal
+ * @description This method is for adding items to the cart
  ===================================================================*/
 function addCart(){
+  //parent element of the .add-cart is taking.
   let product=this.parentElement;
 
   let title=product.querySelector('.card-title').innerHTML;
   let price=product.querySelector('.product-price').innerHTML;
   let imgScr=product.querySelector('img').src;
+  // checking cartItems is array if not then initailizing as array other wise taking items from local storage
+  if(!Array.isArray(cartItems)){
+    cartItems=[]
+  }
+  else{
   
-  
- 
+    cartItems=JSON.parse(localStorage.getItem("products"))
+  }
+ // checking item already added to the cart eles item added to the cartItems and store to the local storage
   if(cartItems!=null&&cartItems.find((el)=>el.title===title)){
     alert("Item already added")
     productCount()
@@ -37,8 +53,7 @@ function addCart(){
     productCount()
   }
   
-  //  displayItems();
-  
+ 
 }
   
 
@@ -46,9 +61,14 @@ function addCart(){
 
 }
 
+/**
+ * 
+ * @description displaying items in cart
+ */
 function displayItems(){
+  // taking items from the local storage
    cartItems=JSON.parse(localStorage.getItem("products"))
-   if(cartItems.length==0){
+   if(cartItems==null|| cartItems.length==0){
     document.getElementById('order-place').style.display='none';
    }
   console.log(cartItems)
@@ -58,7 +78,7 @@ function displayItems(){
     return;
   }
   displayDiv.innerHTML='';
-  
+  // display each item in the cart page
   cartItems.forEach((item,index)=>{
     const element=document.createElement('div')
      element.innerHTML=`<div class="card mb-3">
@@ -90,12 +110,18 @@ function displayItems(){
    </div>`;
      displayDiv.appendChild(element)
   });
+  // showing grand total amount of the cart items
   grandTotal();
 
 }
+
+/**
+ * @description function for showing total items in the cart
+ */
 function productCount(){
   
   var countDisplay=document.getElementById('prdctCnt')
+  //taking length of the array
   let count=cartItems.length;
   if(count!=0){
     
@@ -107,15 +133,24 @@ function productCount(){
   }
   console.log(count)
 }
-
+// onload event is for executing function immeadiately after page is loaded 
 window.onload=loadFunctions;
 
+/**
+ * @description function for load functions immeadiately after page is loaded
+ */
 function loadFunctions(){
  
   displayItems()
   productCount()
   grandTotal()
 }
+
+/**
+ * 
+ * @param {*} id 
+ * @description function for remove items from the cart
+ */
 function removeCartProduct(id){
 cartItems.splice(id,1)
 localStorage.setItem("products",JSON.stringify(cartItems))
@@ -123,6 +158,9 @@ loadFunctions()
 // console.log(id)
 }
 
+/**
+ * @description function for calculating grand total of cart items
+ */
 function grandTotal(){
   let total=0;
   cartItems.forEach((item)=>{
@@ -130,12 +168,14 @@ function grandTotal(){
   })
   document.getElementById('total-price').innerHTML=total;
 }
+
+/**
+ * @description function for placing order and clear items from the cart
+ */
 function placeTheOrder(){
   alert("Order is placed!")
-  // localStorage.removeItem()
-  cartItems.forEach((item,id)=>{
-    cartItems.splice(id)
-    localStorage.setItem("products",JSON.stringify(cartItems))
-    loadFunctions()
-  })
+ localStorage.clear()
+ location.reload()
+  
+  
 }
